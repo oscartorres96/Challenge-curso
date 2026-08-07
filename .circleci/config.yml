@@ -40,6 +40,8 @@ jobs:
           name: Run tests with coverage
           # This assumes pytest is installed via the install-package step above
           command: python -m pytest --cov=app --cov-report=term-missing --cov-report=lcov:coverage/lcov.info
+          
+      - coveralls/upload
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/guides/orchestrate/workflows/ & https://circleci.com/docs/reference/configuration-reference/#workflows
