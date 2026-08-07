@@ -6,6 +6,8 @@
 ## Badges
 [![CircleCI](https://dl.circleci.com/status-badge/img/gh/oscartorres96/Challenge-curso/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/oscartorres96/Challenge-curso/tree/main)
 
+[![Coverage Status](https://coveralls.io/repos/github/oscartorres96/Challenge-curso/badge.svg?branch=main)](https://coveralls.io/github/oscartorres96/Challenge-curso?branch=main)
+
 ## Main Features
 
 - User registration with email and password.
