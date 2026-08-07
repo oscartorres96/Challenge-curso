@@ -3,6 +3,9 @@
 ## Description
 **Basic notification management system for authenticated users.** It allows users to register with an email address and password, create notifications through three different delivery channels (Email, SMS, and Push Notifications), and retrieve their own notifications. The system is designed with an extensible architecture, making it easy to add new notification channels in the future.
 
+## Badges
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/oscartorres96/Challenge-curso/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/oscartorres96/Challenge-curso/tree/master)
+
 ## Main Features
 
 - User registration with email and password.
