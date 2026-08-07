@@ -1,0 +1,36 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    image: notifications-api:latest
+
+    ports:
+      - "8000:8000"
+
+    env_file:
+      - .env
+
+    environment:
+      DATABASE_URL: sqlite:////data/library.db
+
+    volumes:
+      - notifications_data:/data
+
+    restart: unless-stopped
+
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://localhost:8000/').read()"
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 5s
+
+
+volumes:
+  notifications_data:
