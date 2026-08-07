@@ -26,7 +26,6 @@ jobs:
     environment:
       DATABASE_URL: sqlite:///./test.db
       SECRET_KEY: circleci-test-secret-key
-      COVERALLS_REPO_TOKEN: kDugYixcrTGBtFWHbXJ8zqNyT1cV6xA5Z
 
     # Add steps to the job
     # See: https://circleci.com/docs/guides/orchestrate/jobs-steps/#steps-overview & https://circleci.com/docs/reference/configuration-reference/#steps
@@ -40,7 +39,7 @@ jobs:
       - run:
           name: Run tests with coverage
           # This assumes pytest is installed via the install-package step above
-          command: python -m pytest --cov=app --cov-report=term-missing --cov-report=xml
+          command: python -m pytest --cov=app --cov-report=term-missing --cov-report=lcov:coverage/lcov.info
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/guides/orchestrate/workflows/ & https://circleci.com/docs/reference/configuration-reference/#workflows
