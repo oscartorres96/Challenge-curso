@@ -26,7 +26,7 @@ jobs:
     environment:
       DATABASE_URL: sqlite:///./test.db
       SECRET_KEY: circleci-test-secret-key
-      COVERALLS_REPO_TOKEN=kDugYixcrTGBtFWHbXJ8zqNyT1cV6xA5Z
+      COVERALLS_REPO_TOKEN: kDugYixcrTGBtFWHbXJ8zqNyT1cV6xA5Z
 
     # Add steps to the job
     # See: https://circleci.com/docs/guides/orchestrate/jobs-steps/#steps-overview & https://circleci.com/docs/reference/configuration-reference/#steps
