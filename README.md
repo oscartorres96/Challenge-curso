@@ -88,24 +88,11 @@ docker compose down
 ```
 
 ## Running Locally
-## Running Locally
 
 1. Create and activate a virtual environment:
 
 ```bash
 python -m venv .venv
-```
-
-**Windows**
-
-```bash
-.venv\Scripts\activate
-```
-
-**Linux / macOS**
-
-```bash
-source .venv/bin/activate
 ```
 
 2. Install the dependencies:
