@@ -6,6 +6,9 @@ from app.core.security import create_access_token
 from app.dependencies.database import get_db
 from app.schemas.auth import Token
 from app.services.auth import AuthService
+from app.schemas.user import UserCreate, UserResponse
+from app.services.user_service import UserService
+
 
 router = APIRouter(
     prefix="/auth",
@@ -39,3 +42,18 @@ def login(
         "access_token": access_token,
         "token_type": "bearer",
     }
+
+
+@router.post(
+    "/register",
+    response_model=UserResponse,
+    status_code=status.HTTP_201_CREATED,
+)
+def register(
+        user_data: UserCreate,
+        db: Session = Depends(get_db),
+):
+    return UserService.create_user(
+        db=db,
+        user_data=user_data
+    )
